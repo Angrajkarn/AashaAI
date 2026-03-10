@@ -1,0 +1,1647 @@
+
+> frontend@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 44 errors:
+./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { createBox, frame, eachAxis, measurePageBox, convertBoxToBoundingBox, convertBoundingBoxToBox, addValueToWillChange, animateMotionValue, mixNumber, addDomEvent, setDragLock, percent, calcLength, resize, isElementTextInput } from 'motion-dom';
+> 2 | import { invariant } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { addPointerEvent } from '../../events/add-pointer-event.mjs';
+  4 | import { extractEventInfo } from '../../events/event-info.mjs';
+  5 | import { getContextWindow } from '../../utils/get-context-window.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/gestures/drag/index.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { Feature } from 'motion-dom';
+> 2 | import { noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { VisualElementDragControls } from './VisualElementDragControls.mjs';
+  4 |
+  5 | class DragGesture extends Feature {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/gestures/drag/utils/constraints.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { mixNumber, calcLength } from 'motion-dom';
+> 2 | import { progress, clamp } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | /**
+  5 |  * Apply constraints to a point. These constraints are both physical along an
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/gestures/drag/utils/constraints.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/gestures/drag/utils/constraints.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/gestures/focus.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { Feature, addDomEvent } from 'motion-dom';
+> 2 | import { pipe } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | class FocusGesture extends Feature {
+  5 |     constructor() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/gestures/focus.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/gestures.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/gestures/focus.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/gestures.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/gestures/pan/PanSession.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { frameData, frame, isPrimaryPointer, cancelFrame } from 'motion-dom';
+> 2 | import { pipe, secondsToMilliseconds, millisecondsToSeconds } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { addPointerEvent } from '../../events/add-pointer-event.mjs';
+  4 | import { extractEventInfo } from '../../events/event-info.mjs';
+  5 | import { distance2D } from '../../utils/distance.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/gestures/pan/PanSession.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/pan/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/gestures/pan/PanSession.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/pan/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/gestures/pan/index.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { Feature, frame } from 'motion-dom';
+> 2 | import { noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { addPointerEvent } from '../../events/add-pointer-event.mjs';
+  4 | import { getContextWindow } from '../../utils/get-context-window.mjs';
+  5 | import { PanSession } from './PanSession.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/gestures/pan/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/gestures/pan/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/motion/index.mjs:3:1
+Module not found: Can't resolve 'motion-utils'
+  1 | "use client";
+  2 | import { jsxs, jsx } from 'react/jsx-runtime';
+> 3 | import { warning, invariant } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { forwardRef, useContext } from 'react';
+  5 | import { LayoutGroupContext } from '../context/LayoutGroupContext.mjs';
+  6 | import { LazyContext } from '../context/LazyContext.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { warnOnce } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { createMotionComponent } from '../../motion/index.mjs';
+  3 |
+  4 | function createMotionProxy(preloadedFeatures, createVisualElement) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { MotionGlobalConfig, noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { time } from '../frameloop/sync-time.mjs';
+  3 | import { JSAnimation } from './JSAnimation.mjs';
+  4 | import { getFinalKeyframe } from './keyframes/get-final.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { invariant, pipe, clamp, millisecondsToSeconds, secondsToMilliseconds } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { time } from '../frameloop/sync-time.mjs';
+  3 | import { activeAnimations } from '../stats/animation-count.mjs';
+  4 | import { mix } from '../utils/mix/index.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { invariant, millisecondsToSeconds, secondsToMilliseconds, noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { setStyle } from '../render/dom/style-set.mjs';
+  3 | import { supportsScrollTimeline } from '../utils/supports/scroll-timeline.mjs';
+  4 | import { getFinalKeyframe } from './keyframes/get-final.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/definitions.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./components/RealtimeManager.tsx [Client Component Browser]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/definitions.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./components/RealtimeManager.tsx [Client Component SSR]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { clamp } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { time } from '../frameloop/sync-time.mjs';
+  3 | import { JSAnimation } from './JSAnimation.mjs';
+  4 | import { NativeAnimation } from './NativeAnimation.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { easeInOut, isEasingArray, easingDefinitionToFunction } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { interpolate } from '../../utils/interpolate.mjs';
+  3 | import { defaultOffset } from '../keyframes/offsets/default.mjs';
+  4 | import { convertOffsetToTimes } from '../keyframes/offsets/time.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/generators/spring/find.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { warning, secondsToMilliseconds, clamp, millisecondsToSeconds } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { springDefaults } from './defaults.mjs';
+  3 |
+  4 | const safeMin = 0.001;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/find.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/find.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { millisecondsToSeconds, secondsToMilliseconds, clamp } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { generateLinearEasing } from '../../waapi/utils/linear.mjs';
+  3 | import { calcGeneratorDuration, maxGeneratorDuration } from '../utils/calc-duration.mjs';
+  4 | import { createGeneratorEasing } from '../utils/create-generator-easing.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/generators/utils/create-generator-easing.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { millisecondsToSeconds } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { calcGeneratorDuration, maxGeneratorDuration } from './calc-duration.mjs';
+  3 |
+  4 | /**
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/generators/utils/create-generator-easing.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/generators/utils/create-generator-easing.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/generators/spring/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/generators/utils/velocity.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { velocityPerSecond } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | const velocitySampleDuration = 5; // ms
+  4 | function calcGeneratorVelocity(resolveValue, t, current) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/generators/utils/velocity.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/generators/inertia.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/generators/utils/velocity.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/generators/inertia.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { secondsToMilliseconds, MotionGlobalConfig } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { AsyncMotionValueAnimation } from '../AsyncMotionValueAnimation.mjs';
+  3 | import { JSAnimation } from '../JSAnimation.mjs';
+  4 | import { getValueTransition } from '../utils/get-value-transition.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/keyframes/offsets/fill.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { progress } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { mixNumber } from '../../../utils/mix/number.mjs';
+  3 |
+  4 | function fillOffset(offset, remaining) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/keyframes/offsets/fill.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/keyframes/offsets/default.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/keyframes/offsets/fill.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/keyframes/offsets/default.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/keyframes/utils/is-none.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { isZeroValueString } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | function isNone(value) {
+  4 |     if (typeof value === "number") {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/keyframes/utils/is-none.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/keyframes/DOMKeyframesResolver.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/html/HTMLVisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/keyframes/utils/is-none.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/keyframes/DOMKeyframesResolver.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/html/HTMLVisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/utils/can-animate.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { warning } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { isGenerator } from '../generators/utils/is-generator.mjs';
+  3 | import { isAnimatable } from './is-animatable.mjs';
+  4 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/utils/can-animate.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/utils/can-animate.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/utils/css-variables-conversion.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { invariant, isNumericalString } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { isCSSVariableToken } from './is-css-variable.mjs';
+  3 |
+  4 | /**
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/utils/css-variables-conversion.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/keyframes/DOMKeyframesResolver.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/html/HTMLVisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/utils/css-variables-conversion.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/keyframes/DOMKeyframesResolver.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/html/HTMLVisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/waapi/easing/map-easing.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { isBezierDefinition } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { supportsLinearEasing } from '../../../utils/supports/linear-easing.mjs';
+  3 | import { generateLinearEasing } from '../utils/linear.mjs';
+  4 | import { cubicBezierAsString } from './cubic-bezier.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/waapi/easing/map-easing.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/waapi/start-waapi-animation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/definitions.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./components/RealtimeManager.tsx [Client Component Browser]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/waapi/easing/map-easing.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/waapi/start-waapi-animation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/definitions.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./components/RealtimeManager.tsx [Client Component SSR]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/waapi/supports/waapi.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { memo } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | /**
+  4 |  * A list of values that can be hardware-accelerated.
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/waapi/supports/waapi.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/waapi/supports/waapi.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/animation/waapi/utils/unsupported-easing.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { anticipate, backInOut, circInOut } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | const unsupportedEasingFunctions = {
+  4 |     anticipate,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/animation/waapi/utils/unsupported-easing.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/animation/waapi/utils/unsupported-easing.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/frameloop/batcher.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { MotionGlobalConfig } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { stepsOrder } from './order.mjs';
+  3 | import { createRenderStep } from './render-step.mjs';
+  4 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/frameloop/batcher.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/frameloop/frame.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/triage/page.tsx [Client Component Browser]
+    ./app/triage/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/frameloop/batcher.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/frameloop/microtask.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/digitize/page.tsx [Client Component SSR]
+    ./app/digitize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/frameloop/frame.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { createRenderBatcher } from './batcher.mjs';
+  3 |
+  4 | const { schedule: frame, cancel: cancelFrame, state: frameData, steps: frameSteps, } = /* @__PURE__ */ createRenderBatcher(typeof requestAnimationFrame !== "undefined" ? requestAnimationFrame : noop, true);
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/frameloop/frame.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/frameloop/frame.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/frameloop/sync-time.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { MotionGlobalConfig } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { frameData } from './frame.mjs';
+  3 |
+  4 | let now;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/frameloop/sync-time.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/digitize/page.tsx [Client Component Browser]
+    ./app/digitize/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/frameloop/sync-time.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/digitize/page.tsx [Client Component SSR]
+    ./app/digitize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/projection/animation/mix-values.mjs:3:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { mixNumber } from '../../utils/mix/number.mjs';
+  2 | import { percent, px } from '../../value/types/numbers/units.mjs';
+> 3 | import { progress, circOut, noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const borders = ["TopLeft", "TopRight", "BottomLeft", "BottomRight"];
+  6 | const numBorders = borders.length;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/projection/animation/mix-values.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/projection/animation/mix-values.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { SubscriptionManager, clamp, noop } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { animateSingleValue } from '../../animation/animate/single-value.mjs';
+  3 | import { getOptimisedAppearId } from '../../animation/optimized-appear/get-appear-id.mjs';
+  4 | import { getValueTransition } from '../../animation/utils/get-value-transition.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/projection/shared/stack.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { addUniqueItem, removeItem } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | class NodeStack {
+  4 |     constructor() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/projection/shared/stack.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/projection/shared/stack.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/projection/utils/flat-tree.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { addUniqueItem, removeItem } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { compareByDepth } from './compare-by-depth.mjs';
+  3 |
+  4 | class FlatTree {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/projection/utils/flat-tree.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/projection/utils/flat-tree.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/render/VisualElement.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { warnOnce, secondsToMilliseconds, isNumericalString, isZeroValueString, SubscriptionManager } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { KeyframeResolver } from '../animation/keyframes/KeyframesResolver.mjs';
+  3 | import { NativeAnimation } from '../animation/NativeAnimation.mjs';
+  4 | import { acceleratedValues } from '../animation/waapi/utils/accelerated-values.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/load-features.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/load-features.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/delay.mjs:2:1
+Module not found: Can't resolve 'motion-utils'
+  1 | import { time } from '../frameloop/sync-time.mjs';
+> 2 | import { secondsToMilliseconds } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { frame, cancelFrame } from '../frameloop/frame.mjs';
+  4 |
+  5 | /**
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/delay.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/delay.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/interpolate.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { invariant, clamp, MotionGlobalConfig, noop, pipe, progress } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { mix } from './mix/index.mjs';
+  3 |
+  4 | function createMixers(output, ease, customMixer) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/interpolate.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/interpolate.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/animate/single-value.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/is-html-element.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { isObject } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | /**
+  4 |  * Checks if an element is an HTML element in a way
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/is-html-element.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [Client Component Browser]
+    ./app/digitize/page.tsx [Client Component Browser]
+    ./app/digitize/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/is-html-element.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [Client Component SSR]
+    ./app/digitize/page.tsx [Client Component SSR]
+    ./app/digitize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/is-svg-element.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { isObject } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | /**
+  4 |  * Checks if an element is an SVG element in a way
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/is-svg-element.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/is-svg-element.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/layout.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/mix/color.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { warning } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { hex } from '../../value/types/color/hex.mjs';
+  3 | import { hsla } from '../../value/types/color/hsla.mjs';
+  4 | import { hslaToRgba } from '../../value/types/color/hsla-to-rgba.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/mix/color.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/utils/mix/complex.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/utils/mix/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/triage/page.tsx [Client Component Browser]
+    ./app/triage/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/mix/color.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/utils/mix/complex.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/utils/mix/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/triage/page.tsx [Client Component SSR]
+    ./app/triage/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/mix/complex.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { pipe, warning } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { isCSSVariableToken } from '../../animation/utils/is-css-variable.mjs';
+  3 | import { color } from '../../value/types/color/index.mjs';
+  4 | import { complex, analyseComplexValue } from '../../value/types/complex/index.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/mix/complex.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/utils/mix/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/triage/page.tsx [Client Component Browser]
+    ./app/triage/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/mix/complex.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/utils/mix/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/JSAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/triage/page.tsx [Client Component SSR]
+    ./app/triage/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/utils/supports/memo.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { memo } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { supportsFlags } from './flags.mjs';
+  3 |
+  4 | function memoSupports(callback, supportsFlag) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/utils/supports/memo.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/utils/supports/scroll-timeline.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/definitions.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./components/RealtimeManager.tsx [Client Component Browser]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/utils/supports/memo.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/utils/supports/scroll-timeline.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/definitions.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./components/RealtimeManager.tsx [Client Component SSR]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/value/index.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { warnOnce, SubscriptionManager, velocityPerSecond } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { time } from '../frameloop/sync-time.mjs';
+  3 | import { frame } from '../frameloop/frame.mjs';
+  4 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/value/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/triage/page.tsx [Client Component Browser]
+    ./app/triage/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/value/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/VisualElement.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/triage/page.tsx [Client Component SSR]
+    ./app/triage/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/value/types/color/rgba.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { clamp } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { number, alpha } from '../numbers/index.mjs';
+  3 | import { sanitize } from '../utils/sanitize.mjs';
+  4 | import { isColorString, splitColor } from './utils.mjs';
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/value/types/color/rgba.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/value/types/color/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/value/types/maps/defaults.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/value/types/color/rgba.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/value/types/color/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/value/types/maps/defaults.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/value/types/numbers/index.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { clamp } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | const number = {
+  4 |     test: (v) => typeof v === "number",
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/value/types/numbers/index.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/value/types/maps/number.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/value/types/maps/defaults.mjs [Client Component Browser]
+    ./node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./components/RealtimeManager.tsx [Client Component Browser]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/value/types/numbers/index.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/value/types/maps/number.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/value/types/maps/defaults.mjs [Client Component SSR]
+    ./node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./components/RealtimeManager.tsx [Client Component SSR]
+    ./components/RealtimeManager.tsx [Server Component]
+    ./app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./node_modules/motion-dom/dist/es/value/will-change/add-will-change.mjs:1:1
+Module not found: Can't resolve 'motion-utils'
+> 1 | import { MotionGlobalConfig } from 'motion-utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { isWillChangeMotionValue } from './is.mjs';
+  3 |
+  4 | function addValueToWillChange(visualElement, key) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/motion-dom/dist/es/value/will-change/add-will-change.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component Browser]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component Browser]
+    ./app/heatmap/page.tsx [Client Component Browser]
+    ./app/heatmap/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/motion-dom/dist/es/value/will-change/add-will-change.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/gestures/drag/index.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/motion/features/drag.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs [Client Component SSR]
+    ./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [Client Component SSR]
+    ./app/heatmap/page.tsx [Client Component SSR]
+    ./app/heatmap/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

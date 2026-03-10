@@ -1,0 +1,18 @@
+{
+    "status": "DEPROVISIONING",
+    "stopReason": "Essential container in task exited",
+    "containers": [
+        {
+            "name": "backend",
+            "reason": null,
+            "exitCode": 1,
+            "status": "STOPPED"
+        },
+        {
+            "name": "frontend",
+            "reason": null,
+            "exitCode": 0,
+            "status": "STOPPED"
+        }
+    ]
+}

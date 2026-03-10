@@ -24,3 +24,4 @@ flake8
 black
 isort
 mypy
+psycopg2-binary==2.9.9

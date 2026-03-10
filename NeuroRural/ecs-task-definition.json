@@ -1,0 +1,75 @@
+{
+  "family": "aasha-ai-prod-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "executionRoleArn": "arn:aws:iam::399777481673:role/aasha-ai-ecs-execution-role",
+  "taskRoleArn": "arn:aws:iam::399777481673:role/aasha-ai-ecs-execution-role",
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-backend:latest",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "AWS_REGION",
+          "value": "us-east-1"
+        },
+        {
+          "name": "BEDROCK_MODEL_ID",
+          "value": "anthropic.claude-3-opus-20240229-v1:0"
+        },
+        {
+          "name": "APP_ENV",
+          "value": "production"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/aasha-ai-prod/backend",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "backend",
+          "awslogs-create-group": "true"
+        }
+      },
+      "essential": true
+    },
+    {
+      "name": "frontend",
+      "image": "399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-frontend:latest",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "NEXT_PUBLIC_API_URL",
+          "value": "http://localhost:8000"
+        },
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/aasha-ai-prod/frontend",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "frontend",
+          "awslogs-create-group": "true"
+        }
+      },
+      "essential": true
+    }
+  ]
+}

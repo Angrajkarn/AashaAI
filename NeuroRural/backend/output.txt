@@ -1,0 +1,5 @@
+Running API Integration Tests against local server...
+--- Testing Text-Only Triage ---
+Status Code: 500
+Response JSON:
+Test Failed: Expecting value: line 1 column 1 (char 0)

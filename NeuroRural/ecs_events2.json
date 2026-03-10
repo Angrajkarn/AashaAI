@@ -1,0 +1,7 @@
+[
+    "(service aasha-ai-prod-service, taskSet ecs-svc/6693814168940614877) has begun draining connections on 1 tasks.",
+    "(service aasha-ai-prod-service) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:us-east-1:399777481673:targetgroup/aasha-ai-prod-tg/1a0f84b2cac10f77)",
+    "(service aasha-ai-prod-service) registered 1 targets in (target-group arn:aws:elasticloadbalancing:us-east-1:399777481673:targetgroup/aasha-ai-prod-tg/1a0f84b2cac10f77)",
+    "(service aasha-ai-prod-service) has started 1 tasks: (task 418fd852054f4b9daa61ae441325ef45).",
+    "(service aasha-ai-prod-service, taskSet ecs-svc/6693814168940614877) has begun draining connections on 1 tasks."
+]

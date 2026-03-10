@@ -1,0 +1,56 @@
+{
+    "build": {
+        "id": "aasha-ai-frontend-build:3d24daaa-6461-4664-a055-e3f8179aa2c2",
+        "arn": "arn:aws:codebuild:us-east-1:399777481673:build/aasha-ai-frontend-build:3d24daaa-6461-4664-a055-e3f8179aa2c2",
+        "buildNumber": 7,
+        "startTime": "2026-03-09T12:34:53.050000+05:30",
+        "currentPhase": "QUEUED",
+        "buildStatus": "IN_PROGRESS",
+        "projectName": "aasha-ai-frontend-build",
+        "phases": [
+            {
+                "phaseType": "SUBMITTED",
+                "phaseStatus": "SUCCEEDED",
+                "startTime": "2026-03-09T12:34:53.050000+05:30",
+                "endTime": "2026-03-09T12:34:53.142000+05:30",
+                "durationInSeconds": 0
+            },
+            {
+                "phaseType": "QUEUED",
+                "startTime": "2026-03-09T12:34:53.142000+05:30"
+            }
+        ],
+        "source": {
+            "type": "S3",
+            "location": "aasha-ai-codebuild-src-399777481673/source.zip",
+            "buildspec": "buildspec.yml",
+            "insecureSsl": false
+        },
+        "secondarySources": [],
+        "secondarySourceVersions": [],
+        "artifacts": {
+            "location": ""
+        },
+        "cache": {
+            "type": "NO_CACHE"
+        },
+        "environment": {
+            "type": "LINUX_CONTAINER",
+            "image": "aws/codebuild/standard:7.0",
+            "computeType": "BUILD_GENERAL1_MEDIUM",
+            "environmentVariables": [],
+            "privilegedMode": true,
+            "imagePullCredentialsType": "CODEBUILD"
+        },
+        "serviceRole": "arn:aws:iam::399777481673:role/aasha-ai-codebuild-role",
+        "logs": {
+            "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups",
+            "cloudWatchLogsArn": "arn:aws:logs:us-east-1:399777481673:log-group:null:log-stream:null"
+        },
+        "timeoutInMinutes": 45,
+        "queuedTimeoutInMinutes": 480,
+        "buildComplete": false,
+        "initiator": "root",
+        "encryptionKey": "arn:aws:kms:us-east-1:399777481673:alias/aws/s3"
+    }
+}

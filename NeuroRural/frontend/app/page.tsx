@@ -15,8 +15,9 @@ function LoginButton() {
     try {
       await login("demo_fingerprint")
       router.push("/dashboard")
-    } catch (e) {
-      alert("Login failed! Ensure backend is running.")
+    } catch (e: any) {
+      console.error("Login detail error:", e)
+      alert(`Login failed! ${e.message || "Ensure backend is running."}`)
     } finally {
       setLoading(false)
     }

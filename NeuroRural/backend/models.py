@@ -38,6 +38,18 @@ class TriageRecord(Base):
     urgent = Column(Boolean)
     recommendation = Column(String)
     referral_needed = Column(Boolean)
+    image_url = Column(String, nullable=True) # Multimodal support: local path or S3 URL
     timestamp = Column(DateTime, default=datetime.utcnow)
 
     patient = relationship("Patient", back_populates="triage_records")
+
+class InventoryItem(Base):
+    __tablename__ = "inventory"
+
+    id = Column(Integer, primary_key=True, index=True)
+    item_name = Column(String, index=True)
+    current_stock = Column(Integer)
+    min_threshold = Column(Integer)
+    unit = Column(String) # e.g., "vials", "tablets"
+    last_updated = Column(DateTime, default=datetime.utcnow)
+    predicted_exhaustion_date = Column(DateTime, nullable=True)

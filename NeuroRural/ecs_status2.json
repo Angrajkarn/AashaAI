@@ -1,0 +1,30 @@
+[
+    {
+        "id": "ecs-svc/3109619608898322684",
+        "status": "PRIMARY",
+        "taskDefinition": "arn:aws:ecs:us-east-1:399777481673:task-definition/aasha-ai-prod-task:1",
+        "desiredCount": 0,
+        "pendingCount": 0,
+        "runningCount": 0,
+        "failedTasks": 0,
+        "createdAt": "2026-03-09T12:37:49.992000+05:30",
+        "updatedAt": "2026-03-09T12:38:11.470000+05:30",
+        "launchType": "FARGATE",
+        "platformVersion": "1.4.0",
+        "platformFamily": "Linux",
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-026aff29a5eceab75",
+                    "subnet-027450a11fd90b4e7"
+                ],
+                "securityGroups": [
+                    "sg-043cce539e88da7d7"
+                ],
+                "assignPublicIp": "ENABLED"
+            }
+        },
+        "rolloutState": "IN_PROGRESS",
+        "rolloutStateReason": "ECS deployment ecs-svc/3109619608898322684 in progress."
+    }
+]

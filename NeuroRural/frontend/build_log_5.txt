@@ -1,0 +1,29 @@
+
+> frontend@0.1.0 build
+> next build --webpack
+
+Γû▓ Next.js 16.1.6 (webpack)
+
+  Creating an optimized production build ...
+> [PWA] Compile server
+> [PWA] Compile server
+> [PWA] Compile client (static)
+> [PWA] Auto register service worker with: C:\Users\Nivedita\.gemini\antigravity\scratch\AashaAI\NeuroRural\frontend\node_modules\next-pwa\register.js
+> [PWA] Service worker: C:\Users\Nivedita\.gemini\antigravity\scratch\AashaAI\NeuroRural\frontend\public\sw.js
+> [PWA]   url: /sw.js
+> [PWA]   scope: /
+Γ£ô Compiled successfully in 3.2min
+  Running TypeScript ...
+Failed to compile.
+
+./app/patient/[id]/page.tsx:166:21
+Type error: Cannot find name 'Sparkles'.
+
+  164 |                <div className="flex items-center justify-between px-2">
+  165 |                  <h3 className="text-sm font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
+> 166 |                    <Sparkles className="h-4 w-4 text-emerald-400" /> AI Referral Report
+      |                     ^
+  167 |                  </h3>
+  168 |                  <Button variant="ghost" size="sm" onClick={() => setReport(null)} className="text-slate-500 hover:text-white">
+  169 |                    <X className="h-4 w-4 mr-2" /> Close
+Next.js build worker exited with code: 1 and signal: null

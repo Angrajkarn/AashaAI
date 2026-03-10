@@ -1,0 +1,165 @@
+[Container] 2026/03/09 05:47:58.844262 Running on CodeBuild On-demand
+[Container] 2026/03/09 05:47:58.844276 Waiting for agent ping
+[Container] 2026/03/09 05:47:58.945194 Waiting for DOWNLOAD_SOURCE
+[Container] 2026/03/09 05:48:00.133543 Phase is DOWNLOAD_SOURCE
+[Container] 2026/03/09 05:48:00.134855 CODEBUILD_SRC_DIR=/codebuild/output/src3034790610/src
+[Container] 2026/03/09 05:48:00.135328 YAML location is /codebuild/output/src3034790610/src/buildspec.yml
+[Container] 2026/03/09 05:48:00.135519 No commands found for phase name: install
+[Container] 2026/03/09 05:48:00.137260 Setting HTTP client timeout to higher timeout for S3 source
+[Container] 2026/03/09 05:48:00.137352 Processing environment variables
+[Container] 2026/03/09 05:48:00.218928 Selecting 'nodejs' runtime version '20' based on manual selections...
+[Container] 2026/03/09 05:48:02.007623 Running command echo "Installing Node.js version 20 ..."
+Installing Node.js version 20 ...
+
+[Container] 2026/03/09 05:48:02.017014 Running command n $NODE_20_VERSION
+     copying : node/20.19.5
+   installed : v20.19.5 (with npm 10.8.2)
+
+[Container] 2026/03/09 05:48:34.482676 Moving to directory /codebuild/output/src3034790610/src
+[Container] 2026/03/09 05:48:34.482698 Cache is not defined in the buildspec
+[Container] 2026/03/09 05:48:34.522547 Skip cache due to: no paths specified to be cached
+[Container] 2026/03/09 05:48:34.522799 Registering with agent
+[Container] 2026/03/09 05:48:34.556867 Phases found in YAML: 4
+[Container] 2026/03/09 05:48:34.556887  INSTALL: 0 commands
+[Container] 2026/03/09 05:48:34.556892  PRE_BUILD: 4 commands
+[Container] 2026/03/09 05:48:34.556895  BUILD: 8 commands
+[Container] 2026/03/09 05:48:34.556899  POST_BUILD: 6 commands
+[Container] 2026/03/09 05:48:34.557157 Phase complete: DOWNLOAD_SOURCE State: SUCCEEDED
+[Container] 2026/03/09 05:48:34.557169 Phase context status code:  Message: 
+[Container] 2026/03/09 05:48:34.682702 Entering phase INSTALL
+[Container] 2026/03/09 05:48:34.760608 Phase complete: INSTALL State: SUCCEEDED
+[Container] 2026/03/09 05:48:34.760627 Phase context status code:  Message: 
+[Container] 2026/03/09 05:48:34.796805 Entering phase PRE_BUILD
+[Container] 2026/03/09 05:48:34.797773 Running command echo Logging in to Amazon ECR...
+Logging in to Amazon ECR...
+
+[Container] 2026/03/09 05:48:34.803785 Running command aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 399777481673.dkr.ecr.us-east-1.amazonaws.com
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credential-stores
+
+Login Succeeded
+
+[Container] 2026/03/09 05:48:45.006174 Running command REPOSITORY_URI=399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-frontend
+
+[Container] 2026/03/09 05:48:45.011944 Running command BACKEND_URI=399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-backend
+
+[Container] 2026/03/09 05:48:45.017585 Phase complete: PRE_BUILD State: SUCCEEDED
+[Container] 2026/03/09 05:48:45.017597 Phase context status code:  Message: 
+[Container] 2026/03/09 05:48:45.056396 Entering phase BUILD
+[Container] 2026/03/09 05:48:45.057361 Running command echo Building the Next.js frontend...
+Building the Next.js frontend...
+
+[Container] 2026/03/09 05:48:45.063099 Running command cd frontend
+
+[Container] 2026/03/09 05:48:45.068614 Running command npm install --legacy-peer-deps
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+
+added 625 packages, and audited 626 packages in 12s
+
+169 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (1 moderate, 8 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+[Container] 2026/03/09 05:48:57.450779 Running command npm run build
+
+> frontend@0.1.0 build
+> next build
+
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.6s
+  Running TypeScript ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/6) ...
+  Generating static pages using 3 workers (1/6) 
+  Generating static pages using 3 workers (2/6) 
+  Generating static pages using 3 workers (4/6) 
+✓ Generating static pages using 3 workers (6/6) in 206.9ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /dashboard
+└ ○ /triage
+
+
+○  (Static)  prerendered as static content
+
+
+[Container] 2026/03/09 05:49:07.372807 Running command cd ..
+
+[Container] 2026/03/09 05:49:07.379139 Running command echo Building Docker images...
+Building Docker images...
+
+[Container] 2026/03/09 05:49:07.385887 Running command docker build -t $REPOSITORY_URI:latest -f frontend/Dockerfile ./frontend
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 514B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:20-alpine
+#2 ERROR: failed to copy: httpReadSeeker: failed open: unexpected status code https://registry-1.docker.io/v2/library/node/manifests/sha256:5bac2112f1a27db4775ce6ead86db9e0cbc087f0dbddfe3cbc11ecea122d5294: 429 Too Many Requests - Server message: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
+------
+ > [internal] load metadata for docker.io/library/node:20-alpine:
+------
+Dockerfile:3
+--------------------
+   1 |     # Minimal production Dockerfile — uses pre-built .next output (built locally)
+   2 |     # This avoids heavy npm install inside Docker, preventing memory crashes.
+   3 | >>> FROM node:20-alpine
+   4 |     
+   5 |     WORKDIR /app
+--------------------
+ERROR: failed to solve: node:20-alpine: failed to resolve source metadata for docker.io/library/node:20-alpine: failed to copy: httpReadSeeker: failed open: unexpected status code https://registry-1.docker.io/v2/library/node/manifests/sha256:5bac2112f1a27db4775ce6ead86db9e0cbc087f0dbddfe3cbc11ecea122d5294: 429 Too Many Requests - Server message: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
+
+[Container] 2026/03/09 05:49:07.921988 Command did not exit successfully docker build -t $REPOSITORY_URI:latest -f frontend/Dockerfile ./frontend exit status 1
+[Container] 2026/03/09 05:49:07.926171 Phase complete: BUILD State: FAILED
+[Container] 2026/03/09 05:49:07.926190 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: docker build -t $REPOSITORY_URI:latest -f frontend/Dockerfile ./frontend. Reason: exit status 1
+[Container] 2026/03/09 05:49:07.963433 Entering phase POST_BUILD
+[Container] 2026/03/09 05:49:07.964455 Running command echo Pushing images to ECR...
+Pushing images to ECR...
+
+[Container] 2026/03/09 05:49:07.970297 Running command docker push $REPOSITORY_URI:latest
+The push refers to repository [399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-frontend]
+An image does not exist locally with the tag: 399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-frontend
+
+[Container] 2026/03/09 05:49:07.990213 Command did not exit successfully docker push $REPOSITORY_URI:latest exit status 1
+[Container] 2026/03/09 05:49:07.994136 Phase complete: POST_BUILD State: FAILED
+[Container] 2026/03/09 05:49:07.994152 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: docker push $REPOSITORY_URI:latest. Reason: exit status 1
+[Container] 2026/03/09 05:49:08.038374 Set report auto-discover timeout to 5 seconds
+[Container] 2026/03/09 05:49:08.038414 Expanding base directory path:  .
+[Container] 2026/03/09 05:49:08.039858 Assembling file list
+[Container] 2026/03/09 05:49:08.039869 Expanding .
+[Container] 2026/03/09 05:49:08.041334 Expanding file paths for base directory .
+[Container] 2026/03/09 05:49:08.041345 Assembling file list
+[Container] 2026/03/09 05:49:08.041348 Expanding **/*
+[Container] 2026/03/09 05:49:08.146898 No matching auto-discover report paths found
+[Container] 2026/03/09 05:49:08.146943 Report auto-discover file discovery took 0.108568 seconds
+[Container] 2026/03/09 05:49:08.146965 Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+[Container] 2026/03/09 05:49:08.146975 Phase context status code:  Message: 

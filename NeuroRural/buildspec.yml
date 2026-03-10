@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 399777481673.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-frontend
+      - BACKEND_URI=399777481673.dkr.ecr.us-east-1.amazonaws.com/aasha-ai-prod-backend
+  build:
+    commands:
+      - echo Building the Next.js frontend...
+      - cd frontend
+      - npm install --legacy-peer-deps
+      - export NEXT_PUBLIC_API_URL=http://aasha-ai-prod-alb-811530929.us-east-1.elb.amazonaws.com
+      - npm run build
+      - cd ..
+      - echo Building Docker images...
+      - docker build -t $REPOSITORY_URI:latest -f frontend/Dockerfile ./frontend
+      - docker build -t $BACKEND_URI:latest -f backend/Dockerfile .
+  post_build:
+    commands:
+      - echo Pushing images to ECR...
+      - docker push $REPOSITORY_URI:latest
+      - docker push $BACKEND_URI:latest
+      - echo Build and push complete!
+      - echo Forcing new ECS deployment...
+      - aws ecs update-service --cluster aasha-ai-prod-cluster --service aasha-ai-prod-service --force-new-deployment

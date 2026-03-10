@@ -28,6 +28,8 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+import RealtimeManager from "@/components/RealtimeManager";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,6 +40,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <RealtimeManager />
         {children}
       </body>
     </html>
