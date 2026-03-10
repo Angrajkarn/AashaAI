@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/heatmap/page": "app/heatmap/page.js",
+  "/triage/page": "app/triage/page.js",
+  "/digitize/page": "app/digitize/page.js",
+  "/inventory/page": "app/inventory/page.js",
+  "/page": "app/page.js",
+  "/patient/[id]/page": "app/patient/[id]/page.js"
+}
